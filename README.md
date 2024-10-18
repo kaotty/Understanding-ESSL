@@ -10,26 +10,31 @@ All experiments are conducted with a single NVIDIA RTX 3090 GPU. We mainly condu
 ### Different Equivariant Pretraining Tasks
 In this experiment, we conduct equivariant pretraining tasks based on seven different types of transformations. In order to maintain fairness and avoid cross-interactions, we only apply random crops to the raw images before we move on to these tasks.
 
-In order to conduct the experiments, you can enter the ESSL folder and run the following command:
-```python equivariant_tasks.py method=four_fold_rotation```.
+In order to conduct the experiments, you can enter the ESSL folder and run the following command.
+```bash
+python equivariant_tasks.py method=four_fold_rotation
+```
 You may select the method from `{horizontal_flips, vertical_flips, four_fold_rotation, color_inversions, grayscale, jigsaws, four_fold_blurs}`.
 You may also set method as `none` to run the baseline.
 
 ### How Class Information Affects Equivariant Pretraining Tasks
 In this experiment, our goal is to figure out how class information affects rotation prediction. Figure~\ref{fig:model of experiment B.2} demonstrates the outline of the model we use to conduct this experiment. We apply random crops with size 32 and horizontal flips with probability 0.5 to the raw images.
 
-In order to conduct the experiments, you can enter the ESSL folder and run the following commands respectively:
-```python verification.py method=normal
+In order to conduct the experiments, you can enter the ESSL folder and run the following commands respectively.
+```bash
+python verification.py method=normal
 python verification.py method=add
-python verification.py method=eliminate```.
+python verification.py method=eliminate
+```
 
 ### The Study of Model Equivariance
 In order to compare the performance of Resnet and EqResnet, we use rotation prediction as our pretraining task and obtain the linear probing results. We apply various augmentations to the raw images, such as no augmentation, a combination of random crops with size 32 and horizontal flips, and SimCLR augmentations with an output of 32x32. To be more specific, a SimCLR augmentation refers to a sequence of transformations, including a random resized crop with size 32 and scale 0.2-1.0, horizontal flip with probability 0.5, color jitter with probability 0.8, and finally grayscale with probability 0.2.
 
-In order to conduct the experiments, you can enter the Equivariant Network folder and run the following command:
-```python train.py --model resnet18 --dataset cifar10 --train_aug sup --head mlp```.
+In order to conduct the experiments, you can enter the Equivariant Network folder and run the following command.
+```bash
+python train.py --model resnet18 --dataset cifar10 --train_aug sup --head mlp
+```
 You may select the dataset from `{cifar10, cifar100}`, the training augmentation from `{none, sup, simclr}`, the projection head from `{mlp, linear}`.
-
 
 ## Citing this work
 
