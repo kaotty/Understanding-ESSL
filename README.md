@@ -26,8 +26,8 @@ python verification.py method=normal
 python verification.py method=add
 python verification.py method=eliminate
 ```
-![Rotation Accuracy on CIFAR-10]("C:\Users\kaott\OneDrive\桌面\科研\rotation\RotACC_cifar10.pdf" "Rotation Accuracy on CIFAR-10")
-![Rotation Accuracy on CIFAR-100]("C:\Users\kaott\OneDrive\桌面\科研\rotation\RotACC_cifar100.pdf" "Rotation Accuracy on CIFAR-100")
+![Rotation Accuracy on CIFAR-10]("C:\Users\kaott\OneDrive\桌面\NeurIPS2024\ESSL\Rotation-cifar10.png" "Rotation Accuracy on CIFAR-10")
+![Rotation Accuracy on CIFAR-100]("C:\Users\kaott\OneDrive\桌面\NeurIPS2024\ESSL\Rotation-cifar100.png""Rotation Accuracy on CIFAR-100")
 
 ### The Study of Model Equivariance
 In order to compare the performance of Resnet and EqResnet, we use rotation prediction as our pretraining task and obtain the linear probing results. We apply various augmentations to the raw images, such as no augmentation, a combination of random crops with size 32 and horizontal flips, and SimCLR augmentations with an output of 32x32. To be more specific, a SimCLR augmentation refers to a sequence of transformations, including a random resized crop with size 32 and scale 0.2-1.0, horizontal flip with probability 0.5, color jitter with probability 0.8, and finally grayscale with probability 0.2.
