@@ -11,10 +11,10 @@ All experiments are conducted with a single NVIDIA RTX 3090 GPU. We mainly condu
 In this experiment, we conduct equivariant pretraining tasks based on seven different types of transformations. In order to maintain fairness and avoid cross-interactions, we only apply random crops to the raw images before we move on to these tasks. We adopt ResNet-18 as the backbone with a two-layer MLP that has a hidden dimension of 2048 and an output dimension corresponding to the pretraining tasks.
 
 In order to conduct the experiments, you can enter the ESSL folder and run the following command:
-'python equivariant_tasks.py method=four_fold_rotation'.
+`python equivariant_tasks.py method=four_fold_rotation`.
 You may select the method from
-'{horizontal_flips, vertical_flips, four_fold_rotation, color_inversions, grayscale, jigsaws, four_fold_blurs}'.
-You may also set method as "none" to run the baseline.
+`{horizontal_flips, vertical_flips, four_fold_rotation, color_inversions, grayscale, jigsaws, four_fold_blurs}`.
+You may also set method as 'none' to run the baseline.
 
 ### How Class Information Affects Equivariant Pretraining Tasks
 
