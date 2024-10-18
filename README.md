@@ -37,6 +37,16 @@ python train.py --model resnet18 --dataset cifar10 --train_aug sup --head mlp
 You may select the dataset from `{cifar10, cifar100}`, the training augmentation from `{none, sup, simclr}`, the projection head from `{mlp, linear}`.
 
 ## Citing this work
+```
+@inproceedings{
+anonymous2024understanding,
+title={Understanding the Role of Equivariance in Self-supervised Learning},
+author={Anonymous},
+booktitle={The Thirty-eighth Annual Conference on Neural Information Processing Systems},
+year={2024},
+url={https://openreview.net/forum?id=NLqdudgBfy}
+}
+```
 
 ## Acknowledgement
 Our code partly follows the official implementation of Efficient Equivariant Network (https://github.com/LingshenHe/Efficient-Equivariant-Network).
