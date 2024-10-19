@@ -34,7 +34,7 @@ In order to conduct the experiments, you can enter the Equivariant Network folde
 ```bash
 python train.py --model resnet18 --dataset cifar10 --train_aug sup --head mlp
 ```
-You may select the dataset from `{cifar10, cifar100}`, the training augmentation from `{none, sup, simclr}`, the projection head from `{mlp, linear}`.
+You may select the dataset from `{cifar10, cifar100}`, the training augmentation from `{none, sup, simclr}`, and the projection head from `{mlp, linear}`.
 
 ## Citing this work
 ```
