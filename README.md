@@ -18,7 +18,7 @@ You may select the method from `{horizontal_flips, vertical_flips, four_fold_rot
 You may also set method as `none` to run the baseline.
 
 ### How Class Information Affects Equivariant Pretraining Tasks
-In this experiment, our goal is to figure out how class information affects rotation prediction. Figure~\ref{fig:model of experiment B.2} demonstrates the outline of the model we use to conduct this experiment. We apply random crops with size 32 and horizontal flips with probability 0.5 to the raw images.
+In this experiment, our goal is to figure out how class information affects rotation prediction. We apply random crops with size 32 and horizontal flips with probability 0.5 to the raw images.
 
 In order to conduct the experiments, you can enter the ESSL folder and run the following commands respectively.
 ```bash
