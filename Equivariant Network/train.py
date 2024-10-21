@@ -1,4 +1,5 @@
 import argparse
+import os
 import numpy as np
 from tqdm import tqdm
 import torch
@@ -178,11 +179,14 @@ else:
                                 momentum=0.9, nesterov=True, weight_decay=5e-4)
 
 scheduler = MultiStepLR(cnn_optimizer, milestones=[60, 120, 160], gamma=0.2)
-
+script_dir = os.path.dirname(os.path.abspath(__file__))
+os.makedirs(os.path.join(script_dir,'logs'), exist_ok=True)
+os.makedirs(os.path.join(script_dir,'logs_loss'), exist_ok=True)
+os.makedirs(os.path.join(script_dir,'checkpoints'), exist_ok=True)
 filename = 'logs/' + test_id + '.csv'
 csv_logger = CSVLogger(args=args, fieldnames=['epoch', 'train_acc', 'test_acc', 'rot_acc'], filename=filename)
-
-csv_logger_1 = CSVLogger(args=args, fieldnames=['train_loss', 'train_acc', 'rot_acc'], filename='logs_loss/' + test_id + '.csv')
+filename_1 = 'logs_loss/' + test_id + '.csv'
+csv_logger_1 = CSVLogger(args=args, fieldnames=['train_loss', 'train_acc', 'rot_acc'], filename=filename_1)
 
 
 
@@ -270,7 +274,7 @@ for epoch in range(args.epochs):
 
     row = {'epoch': str(epoch), 'train_acc': str(accuracy), 'test_acc': str(test_acc), 'rot_acc': str(accuracy_r)}
     csv_logger.writerow(row)
-    if ((epoch + 1) % 400 == 0):
+    if ((epoch + 1) % 200 == 0):
         torch.save(cnn.state_dict(), 'checkpoints/' + test_id + '_epoch' + str(epoch) + '.pt')
 
 torch.save(cnn.state_dict(), 'checkpoints/' + test_id + '.pt')
