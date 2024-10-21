@@ -29,6 +29,8 @@ python verification.py method=add
 python verification.py method=eliminate
 ```
 
+**Be sure to remove `.detach()` in `logits = self.linear(feature.detach())` when you run the code.**
+
 ### The Study of Model Equivariance
 In order to compare the performance of Resnet and EqResnet, we use rotation prediction as our pretraining task and obtain the linear probing results. We apply various augmentations to the raw images, such as no augmentation, a combination of random crops with size 32 and horizontal flips, and SimCLR augmentations with an output of 32x32. To be more specific, a SimCLR augmentation refers to a sequence of transformations, including a random resized crop with size 32 and scale 0.2-1.0, horizontal flip with probability 0.5, color jitter with probability 0.8, and finally grayscale with probability 0.2.
 
