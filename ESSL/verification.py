@@ -115,7 +115,7 @@ def train(args: DictConfig) -> None:
     test_transform = transforms.ToTensor() 
     
     train_set = data_func(root=data_dir, train=True, transform=train_transform, download=True)
-    test_set = data_func(root=data_dir, train=False, transform=test_transform, download=False)
+    test_set = data_func(root=data_dir, train=False, transform=test_transform, download=True)
 
     train_loader = DataLoader(train_set,
                               batch_size=args.batch_size,
