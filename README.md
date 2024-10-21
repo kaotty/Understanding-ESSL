@@ -1,4 +1,4 @@
-# Understanding the Role of Equivariance in Self-supervised Learning
+# Understanding ESSL
 This repository includes a PyTorch implementation of the NeurIPS 2024 paper [Understanding the Role of Equivariance in Self-supervised Learning]() authored by [Yifei Wang*](https://yifeiwang77.com/), Kaiwen Hu*, [Sharut Gupta](https://www.mit.edu/~sharut/), [Ziyu Ye](https://hazelye-bot.github.io/), [Yisen Wang](https://yisenwang.github.io/), and [Stefanie Jegelka](https://people.csail.mit.edu/stefje/).
 
 ## Abstract
