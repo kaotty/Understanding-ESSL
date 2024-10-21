@@ -11,7 +11,7 @@ hydra:
 
 # defaults:
 dataset: cifar10
-data_dir: /data/kwhu/new_rotation/cifar10
+data_dir: /data/kwhu/new_rotation/cifar10 # change it to your own directory
 checkpoint: ckpt
 
 # model
