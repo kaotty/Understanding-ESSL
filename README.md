@@ -10,6 +10,8 @@ All experiments are conducted with a single NVIDIA RTX 3090 GPU. We mainly condu
 pip install -r requirements.txt
 ```
 
+Next, be sure to set `data_dir` to the directory where the dataset is stored.
+
 We have three parts of experiments in this paper. The first one is to compare the performance of different equivariant tasks. The second one is to verify that class information does affect equivariant pretraining tasks. The third one is to study the effect of model equivariance. The ESSL folder contains code for the first two parts, while the third part is implemented by the code in the Equivariant Network folder.
 
 ### Different Equivariant Pretraining Tasks
@@ -20,7 +22,7 @@ In order to conduct the experiments, you can enter the ESSL folder and run the f
 python equivariant_tasks.py method=four_fold_rotation
 ```
 You may select the method from `{horizontal_flips, vertical_flips, four_fold_rotation, color_inversions, grayscale, jigsaws, four_fold_blurs}`.
-You may also set method as `none` to run the baseline.
+You may also set method to `none` to run the baseline.
 
 ### How Class Information Affects Equivariant Pretraining Tasks
 In this experiment, our goal is to figure out how class information affects rotation prediction. We apply random crops with size 32 and horizontal flips with probability 0.5 to the raw images.
