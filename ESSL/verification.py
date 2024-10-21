@@ -129,10 +129,7 @@ def train(args: DictConfig) -> None:
     base_encoder = eval(args.backbone)
     model = CIFAR_Network(base_encoder, 
                    projection_dim=args.projection_dim, 
-                   projector_type=args.projector_type, 
-                   n_classes=n_classes,
-                   separate_proj=args.method.startswith('Mixed'),
-                   args=args,
+                   n_classes=n_classes
                    ).cuda()
     
     logger.info('Backbone: {}, Dataset: {}'.format(args.backbone, args.dataset))

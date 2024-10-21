@@ -295,11 +295,8 @@ def train(args: DictConfig) -> None:
     assert args.backbone in ['resnet18', 'resnet50']
     base_encoder = eval(args.backbone)
     model = CIFAR_Network(base_encoder, 
-                   projection_dim=projection_dim, 
-                   projector_type=args.projector_type, 
-                   n_classes=n_classes,
-                   separate_proj=False,
-                   args=args,
+                   projection_dim=projection_dim,
+                   n_classes=n_classes
                    ).cuda()
 
     logger.info('Augmentation: {}'.format(args.method))

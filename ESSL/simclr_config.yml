@@ -44,25 +44,25 @@ lmbd: 1
 finetune_epochs: 100
 load_epoch: 1000  # checkpoint for finetune
 
-# new
-projector_type: "SimCLR"
-proj_hidden_dim: 2048
-load_model: /data/kwhu/new_rotation/rotation_ckpt
-min_crop: 0.08
-separate_proj: False
-anneal: False
-rot_prob_min: 1
-rot_noise: 0.0
+# # new
+# projector_type: "SimCLR"
+# proj_hidden_dim: 2048
+# load_model: /data/kwhu/new_rotation/rotation_ckpt
+# min_crop: 0.08
+# separate_proj: False
+# anneal: False
+# rot_prob_min: 1
+# rot_noise: 0.0
 
-# transformers
-n_embd: 2048
-n_layer: 1
-n_head: 4
-hidden_dim: 2048
-n_context: 16
+# # transformers
+# n_embd: 2048
+# n_layer: 1
+# n_head: 4
+# hidden_dim: 2048
+# n_context: 16
 
-# care
-train_simclr: False
-weight: 0.001
-device: "cuda:0"
-equiv_splits: 8
+# # care
+# train_simclr: False
+# weight: 0.001
+# device: "cuda:0"
+# equiv_splits: 8
