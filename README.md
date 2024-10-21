@@ -10,7 +10,7 @@ All experiments are conducted with a single NVIDIA RTX 3090 GPU. We mainly condu
 pip install -r requirements.txt
 ```
 
-Next, be sure to set `data_dir` to the directory where the dataset is stored.
+Next, be sure to set `data_dir` in `ESSL/config.yml` to the directory where the dataset is stored.
 
 We have three parts of experiments in this paper. The first one is to compare the performance of different equivariant tasks. The second one is to verify that class information does affect equivariant pretraining tasks. The third one is to study the effect of model equivariance. The ESSL folder contains code for the first two parts, while the third part is implemented by the code in the Equivariant Network folder.
 
