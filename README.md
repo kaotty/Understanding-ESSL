@@ -58,6 +58,6 @@ url={https://openreview.net/forum?id=NLqdudgBfy}
 ```
 
 ## Acknowledgement
-Our code in the ESSL folder follows the official implementation of
+Our code in the ESSL folder follows the official implementation of Equivariant Contrastive Learning (https://github.com/rdangovs/essl).
 
 Our code in the Equivariant Network folder follows the official implementation of Efficient Equivariant Network (https://github.com/LingshenHe/Efficient-Equivariant-Network).
