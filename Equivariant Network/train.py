@@ -110,7 +110,7 @@ elif args.train_aug == 'sup':
         transforms.RandomHorizontalFlip(),
         transforms.ToTensor()])
 elif args.train_aug == 'simclr':
-    pre_transform = transforms.Compose([transforms.RandomCrop(32),
+    pre_transform = transforms.Compose([transforms.RandomResizedCrop(32),
                                             transforms.RandomHorizontalFlip(p=0.5),
                                             get_color_distortion(s=0.5),
                                         transforms.ToTensor()])
