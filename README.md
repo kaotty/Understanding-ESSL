@@ -48,9 +48,9 @@ You may select the dataset from `{cifar10, cifar100}`, the training augmentation
 ## Citing this work
 ```
 @inproceedings{
-anonymous2024understanding,
+wang2024understanding,
 title={Understanding the Role of Equivariance in Self-supervised Learning},
-author={Anonymous},
+author={Yifei Wang and Kaiwen Hu and Sharut Gupta and Ziyu Ye and Yisen Wang and Stefanie Jegelka},
 booktitle={The Thirty-eighth Annual Conference on Neural Information Processing Systems},
 year={2024},
 url={https://openreview.net/forum?id=NLqdudgBfy}
