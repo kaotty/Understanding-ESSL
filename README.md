@@ -53,7 +53,6 @@ title={Understanding the Role of Equivariance in Self-supervised Learning},
 author={Yifei Wang and Kaiwen Hu and Sharut Gupta and Ziyu Ye and Yisen Wang and Stefanie Jegelka},
 booktitle={The Thirty-eighth Annual Conference on Neural Information Processing Systems},
 year={2024},
-url={https://openreview.net/forum?id=NLqdudgBfy}
 }
 ```
 
