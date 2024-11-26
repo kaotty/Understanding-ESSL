@@ -51,7 +51,7 @@ You may select the dataset from `{cifar10, cifar100}`, the training augmentation
 wang2024understanding,
 title={Understanding the Role of Equivariance in Self-supervised Learning},
 author={Yifei Wang and Kaiwen Hu and Sharut Gupta and Ziyu Ye and Yisen Wang and Stefanie Jegelka},
-booktitle={The Thirty-eighth Annual Conference on Neural Information Processing Systems},
+booktitle={NeurIPS},
 year={2024},
 }
 ```
